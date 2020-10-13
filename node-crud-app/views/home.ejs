@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+</head>
+<body>
+    <form action="/add" method="POST">
+        <table border="1" width="350px" align="center">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name" ></td>
+            </tr>
+          
+            <tr>
+                <td>Mob:</td>
+                <td><input type="text" name="mob" id="mob"></td>
+            </tr>
+
+            <tr>
+                <td>Aadhar:</td>
+                <td><input type="text" name="uid" id="uid"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="right"><button type="submit" name="submitBtn" id="submitBtn">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+    
+    <table border="1" align="center" width="500px" style="margin-top: 20px;">
+        <tr>
+            <td>Name</td>
+            <td>Mob</td>
+            <td>Aadhar</td>
+            <td>Action</td>
+            <td>Action</td>
+        </tr>
+        
+        <% myData.forEach((customer)=>{ %>
+
+            <tr>
+                <td><%- customer.name; %></td>
+                <td><%- customer.mob; %></td>
+                <td><%- customer.uid; %></td>
+                <td><a href="/edit/<%- customer._id; %>">Edit</a></td>
+                <td><a href="/delete/<%- customer._id; %>">Delete</a></td>
+            </tr>
+
+            
+          <% }); %>
+
+    </table>
+
+</body>
+</html>

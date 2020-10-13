@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+</head>
+<body>
+    <form action="/edit/<%- customer.id; %>" method="POST">
+        <table border="1" width="350px" align="center">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name" value="<%- customer.name; %>" ></td>
+            </tr>
+          
+            <tr>
+                <td>Mob:</td>
+                <td><input type="text" name="mob" id="mob" value="<%- customer.mob; %>"></td>
+            </tr>
+
+            <tr>
+                <td>Aadhar:</td>
+                <td><input type="text" name="uid" id="uid" value="<%- customer.uid; %>"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="right"><button type="submit" name="submitBtn" id="submitBtn">Update</button></td>
+            </tr>
+        </table>
+    </form>
+    
+
+</body>
+</html>
